@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\Task\CreateController;
+use App\Http\Controllers\Task\DeleteController;
 use App\Http\Controllers\Task\IndexController;
+use App\Http\Controllers\Task\MarkCompletedController;
+use App\Http\Controllers\Task\UpdateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,5 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', IndexController::class);
-
-
+Route::post('/task', CreateController::class);
+Route::delete('/task/{task}', DeleteController::class);
+Route::patch('/task/{task}/completed', MarkCompletedController::class);
+Route::put('/task/{task}', UpdateController::class);
