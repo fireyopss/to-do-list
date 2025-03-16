@@ -14,9 +14,18 @@
 
     @vite('resources/css/app.css')
 </head>
-<body class="h-screen">
+<body class="h-screen" style="background: #ECECEC">
+
+    <nav class="h-38 container mx-auto mt-4">
+    <img src="{{ asset('logo.png') }}" alt="Logo">
+    </nav>
     
     @yield('content')
+
+
+    <div class="flex items-center justify-center text-center mt-24 text-gray-400">
+        <p>Copyright &copy; 2020 All Rights Reserved</p>
+    </div>
 
 </body>
 </html>
