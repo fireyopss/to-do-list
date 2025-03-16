@@ -7,9 +7,36 @@
 @section('content')
 <div class="m-1 flex space-x-3 container mx-auto ">
 
+
+
+
+
     <div class="flex flex-col w-96">
-        <input type="text" class="border-2 border-gray-300 bg-white rounded-md px-2 focus:outline-none focus:ring-2 py-1 focus:ring-blue-500 focus:border-blue-500" placeholder="Insert task name">
-        <div class="border-2 bg-blue-600 mt-2 flex items-center justify-center text-white py-2 cursor-pointer hover:bg-blue-500">Add</div>
+        <form method="POST" action="{{route('tasks.store')}}">
+            @csrf
+            <input type="text" name="task" class="w-full border-2 border-gray-300 bg-white rounded-md px-2 focus:outline-none focus:ring-2 py-1 focus:ring-blue-500 focus:border-blue-500" placeholder="Insert task name">
+            <input type="submit" value="Add" class="w-full border-2 bg-blue-600 mt-2 flex items-center justify-center text-white py-2 cursor-pointer hover:bg-blue-500"/>
+                
+        </form>
+
+        @if(session('success'))
+    <div class="bg-green-500 text-white p-4 rounded-md">
+        {{session('success')}}
+    </div>
+@endif
+
+
+
+        @if($errors->any())
+            <div class="bg-red-500 text-white p-4 rounded-md mt-4">
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li>{{$error}}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
     </div>
 
     <div class="flex-grow">

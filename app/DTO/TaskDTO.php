@@ -7,7 +7,7 @@ class TaskDTO extends BaseDTO
     public bool $completed;
 
 
-    public function __construct(string $task, bool $completed)
+    public function __construct(string $task, bool $completed=false)
     {
         $this->task = $task;
         $this->completed = $completed;

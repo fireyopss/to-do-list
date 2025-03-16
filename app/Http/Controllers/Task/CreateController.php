@@ -12,9 +12,9 @@ class CreateController
         $taskDTO = new TaskDTO(...$request->safe());
 
         $task = $createAction->execute($taskDTO);
+        
 
-        return $task;
+        return redirect()->route('tasks.index', $task)->with('success', 'Task created successfully');
 
-        // return redirect()->route('tasks.show', $task);
     }
 }
