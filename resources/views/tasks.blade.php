@@ -12,7 +12,7 @@
 
     @vite('resources/css/app.css')
 </head>
-<body>
-
+<body class="bg-black text-white text-5xl flex items-center justify-center h-screen">
+    <p class="text-5xl">tasks</p>
 </body>
 </html>

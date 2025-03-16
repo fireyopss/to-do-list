@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Task\IndexController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,11 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('tasks');
-})->middleware('auth');
+Route::get('/', IndexController::class);
 
 
-Route::get('/login',function(){
-    return view('login');
-})->name('login');
