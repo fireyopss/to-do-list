@@ -11,6 +11,8 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/x-icon" href="{{asset('logo.png')}}">
 
     @vite('resources/css/app.css')
 </head>

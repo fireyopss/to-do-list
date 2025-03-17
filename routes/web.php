@@ -18,8 +18,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', IndexController::class);
-Route::post('/task', CreateController::class);
-Route::delete('/task/{task}', DeleteController::class);
-Route::patch('/task/{task}/completed', MarkCompletedController::class);
+Route::get('/', IndexController::class)->name('tasks.index');
+Route::post('/task', CreateController::class)->name('tasks.store');
+Route::delete('/task/{task}', DeleteController::class)->name('tasks.destroy');
+Route::patch('/task/{task}/completed', MarkCompletedController::class)->name('tasks.completed');
 Route::put('/task/{task}', UpdateController::class);

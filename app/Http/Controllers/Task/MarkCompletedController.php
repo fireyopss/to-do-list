@@ -10,7 +10,8 @@ class MarkCompletedController
     {
         $completedAction->execute($task);
 
-        return response()->noContent();
+        return redirect()->route('tasks.index', $task)->with('success', 'Task completed');
+
     }
     
 }

@@ -32,18 +32,21 @@ How to Run This Project
 
     Copy the example environment file:
 
-cp .env.example .env
+    cp .env.example .env
 
 Install dependencies:
 
-npm install
+    npm install
 
 Start the frontend development server:
 
-npm run dev
+    npm run dev
 
 In a separate terminal, start the Laravel server:
 
     php artisan serve
 
 Now the project should be up and running! 🚀
+
+
+   ![Alt text](assets/completedlooktayyab.png?raw=true "Title")
